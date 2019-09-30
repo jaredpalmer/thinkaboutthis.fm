@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-
+import ogImage from '../images/album.png';
 export interface SeoProps {
   title?: string;
   description?: string;
@@ -66,15 +66,11 @@ export const Seo: React.SFC<SeoProps> = ({
             },
             {
               name: 'twitter:image',
-              content:
-                image ||
-                'https://megaphone-prod.s3.amazonaws.com/podcasts/77e3c5ca-de22-11e9-a22c-2708e4e5850b/image/uploads_2F1569258166099-2vrbzsr3p0e-24cfde05d65a44277165d2f9629dbdb2_2FThink%2BAbout%2BThis%2BPlaceholder%2BArtworkSIZEXV2.png',
+              content: image || ogImage,
             },
             {
               name: 'og:image',
-              content:
-                image ||
-                'https://megaphone-prod.s3.amazonaws.com/podcasts/77e3c5ca-de22-11e9-a22c-2708e4e5850b/image/uploads_2F1569258166099-2vrbzsr3p0e-24cfde05d65a44277165d2f9629dbdb2_2FThink%2BAbout%2BThis%2BPlaceholder%2BArtworkSIZEXV2.png',
+              content: image || ogImage,
             },
             {
               name: 'apple-itunes-app',
