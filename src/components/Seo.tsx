@@ -66,11 +66,11 @@ export const Seo: React.SFC<SeoProps> = ({
             },
             {
               name: 'twitter:image',
-              content: image || ogImage,
+              content: image || `https://thinkaboutthis.fm${ogImage}`,
             },
             {
               name: 'og:image',
-              content: image || ogImage,
+              content: image || `https://thinkaboutthis.fm${ogImage}`,
             },
             {
               name: 'apple-itunes-app',
