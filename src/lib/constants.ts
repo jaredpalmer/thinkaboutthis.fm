@@ -7,10 +7,10 @@ export const LINKS = [
   //   text: 'Shop',
   //   href: 'https://shop.thinkaboutthis.fm',
   // },
-  // {
-  //   text: '@theundefinedio',
-  //   href: 'https://twitter.com/theundefinedio',
-  // },
+  {
+    text: '@thinkabouthisfm',
+    href: 'https://twitter.com/thinkabouthisfm',
+  },
   {
     text: '@shellypalmer',
     href: 'https://twitter.com/shellypalmer',

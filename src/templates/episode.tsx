@@ -188,7 +188,10 @@ export default class Episode extends React.Component<any, any> {
                           </Link>{' '}
                           · {format(episode.date, 'MMM D, YYYY')}
                         </p>
-                        <ShareRow {...css({ marginBottom: rhythm(2) })} />
+                        <ShareRow
+                          author="thinkabouthisfm"
+                          {...css({ marginBottom: rhythm(2) })}
+                        />
                       </header>
                       <iframe
                         frameBorder="no"
