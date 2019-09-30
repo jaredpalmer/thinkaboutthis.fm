@@ -13,7 +13,7 @@ export function Header(props: any) {
           [theme.media.medium]: { marginTop: rhythm(2) },
         })}
       >
-        The Think About This Podcast
+        Think About This
       </h1>
       <p
         {...css({
