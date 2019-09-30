@@ -29,12 +29,12 @@ export const Seo: React.SFC<SeoProps> = ({
         meta={
           [
             { name: 'copyright', content: 'The Palmer Group' },
-            { name: 'og:type', content: 'website' },
+            { property: 'og:type', content: 'website' },
             title && {
               name: 'twitter:title',
               content: title,
             },
-            title && { name: 'og:title', content: title },
+            title && { property: 'og:title', content: title },
             // { name: 'twitter:site', content: '@theundefinedio' },
             description && {
               name: 'description',
@@ -50,7 +50,7 @@ export const Seo: React.SFC<SeoProps> = ({
             },
             {
               property: 'og:url',
-              content: `https://thinkaboutthis.fm${slug}`,
+              content: `https://thinkaboutthis.fm${slug}/`,
             },
             {
               property: 'og:site_name',
@@ -69,7 +69,7 @@ export const Seo: React.SFC<SeoProps> = ({
               content: image || `https://thinkaboutthis.fm${ogImage}`,
             },
             {
-              name: 'og:image',
+              property: 'og:image',
               content: image || `https://thinkaboutthis.fm${ogImage}`,
             },
             {
