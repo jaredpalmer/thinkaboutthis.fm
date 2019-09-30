@@ -41,11 +41,11 @@ export const PODCAST_LINKS: ActionLinkProps[] = [
   //     'https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iuluvwqlkrf5tqh75f5b4x7xxym?t%3DThe_Undefined_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16',
   //   text: 'Google Play',
   // },
-  {
-    src: anchor,
-    href: 'https://anchor.fm/the-undefined-podcast',
-    text: 'Anchor',
-  },
+  // {
+  //   src: anchor,
+  //   href: 'https://anchor.fm/the-undefined-podcast',
+  //   text: 'Anchor',
+  // },
   {
     src: overcast,
     href: 'https://overcast.fm/itunes1481099167',
