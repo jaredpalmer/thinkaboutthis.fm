@@ -95,12 +95,12 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'UA-55176740-9',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-1611517-20',
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
