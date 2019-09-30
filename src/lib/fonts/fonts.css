@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'GT America';
+  font-style: normal;
+  font-weight: 400;
+  src: url('GTAmerica-Regular.woff') format('woff'), url('GTAmerica-Regular.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: 'GT America';
+  font-style: italic;
+  font-weight: 400;
+  src: url('GTAmerica-RegularItalic.woff') format('woff'), url('GTAmerica-RegularItalic.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: 'GT America';
+  font-style: normal;
+  font-weight: 700;
+  src: url('GTAmerica-Bold.woff') format('woff'), url('GTAmerica-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GT America';
+  font-style: italic;
+  font-weight: 700;
+  src: url('GTAmerica-BoldItalic.woff') format('woff'), url('GTAmerica-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GT America Extended';
+  font-style: normal;
+  font-weight: 700;
+  src: url('GTAmerica-ExtendedBold.woff') format('woff'), url('GTAmerica-ExtendedBold.woff2') format('woff2');
+}

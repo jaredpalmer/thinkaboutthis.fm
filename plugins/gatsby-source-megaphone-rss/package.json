@@ -1,0 +1,26 @@
+{
+  "name": "gatsby-source-megaphone",
+  "version": "0.1.0",
+  "description": "Import Megaphone.fm RSS feed data into Gatsby.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.com/uptimeventures/gatsby-source-rss.git"
+  },
+  "keywords": [
+    "Gatsby",
+    "feed",
+    "rss",
+    "source"
+  ],
+  "dependencies": {
+    "axios": "0.18.0",
+    "lodash.get": "4.4.2",
+    "request": "^2.88.0",
+    "request-promise": "4.2.2",
+    "xml2js": "0.4.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
