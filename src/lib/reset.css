@@ -22,22 +22,6 @@ div[role="group"] {
   height: 100%;
 }
 
-.hero__image {
-  overflow: hidden;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  transform: translateZ(0px);
-  animation-name: zoomScale;
-  animation-duration: 16s;
-  animation-fill-mode: forwards;
-  /* background-image: url('/dot.svg'), radial-gradient(50% 50%, transparent 50%, #000 100%), linear-gradient(#111, #000); */
-}
-
 ::selection {
   background: #00FFF4;
   color: #000;

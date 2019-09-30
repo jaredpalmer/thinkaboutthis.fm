@@ -96,7 +96,6 @@ export default class Episode extends React.Component<any, any> {
                     display: 'block',
                     textDecoration: 'none',
                     textAlign: 'center',
-                    background: '#000',
                     margin: '2rem auto',
                     width: 300,
                     height: 300,
@@ -107,6 +106,7 @@ export default class Episode extends React.Component<any, any> {
                   })}
                 >
                   <GatsbyImage
+                    style={{ borderRadius: 16 }}
                     sizes={this.props.data.file.childImageSharp.sizes}
                   />
                 </Link>

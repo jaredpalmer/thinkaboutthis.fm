@@ -86,13 +86,13 @@ export default class Home extends React.Component<any, any> {
                   margin: '2rem auto',
                   width: 300,
                   height: 300,
-                  // margin: '.5rem 0',
                   borderRadius: 16,
                   overflow: 'hidden',
                   boxShadow: `0 4px 8px rgba(0,0,0,.1), 0 16px 32px rgba(0,0,0,.1)`,
                 })}
               >
                 <GatsbyImage
+                  style={{ borderRadius: 16 }}
                   sizes={this.props.data.file.childImageSharp.sizes}
                 />
               </Link>
