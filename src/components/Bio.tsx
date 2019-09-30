@@ -50,7 +50,7 @@ export function Bio({ name, avatarUrl, byline, twitterHandle }: BioProps) {
           {...css({
             color: theme.color.white,
             fontWeight: 700,
-            marginBottom: rhythm(0.1),
+            fontFamily: 'GT America Extended',
           })}
         >
           {name}
