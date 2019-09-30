@@ -236,7 +236,7 @@ export const Footer: React.SFC<FooterProps> = ({ showForm = true }) => {
           <a href="https://github.com/threepointone/glamor">Glamor</a>. It is
           hosted on <a href="https://netlify.com">Netlify</a> and the source
           code is on{' '}
-          <a href="https://github.com/undefinedfm/thinkaboutthis.fm">GitHub</a>.
+          <a href="https://github.com/jaredpalmer/thinkaboutthis.fm">GitHub</a>.
         </div>
       </Container>
     </footer>
