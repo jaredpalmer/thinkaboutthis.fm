@@ -30,7 +30,7 @@ export const Label: React.SFC<any> = props => (
 
 export const Fieldset: React.SFC<any> = ({ label, id, render, ...props }) => {
   return (
-    <Block position="relative" marginBottom="2rem">
+    <Block position="relative" marginBottom=".25rem">
       <Field
         id={id}
         {...props}
@@ -41,12 +41,12 @@ export const Fieldset: React.SFC<any> = ({ label, id, render, ...props }) => {
               position="relative"
               textTransform="uppercase"
               opacity="0"
-              fontSize=".85rem"
+              fontSize=".75rem"
               marginBottom=".5rem"
               letterSpacing=".025em"
               textAlign="left"
               zIndex="1"
-              color={theme.color.gray}
+              color={theme.color.grayLighter}
               pose={fieldProps.field.value !== '' ? 'open' : 'closed'}
             >
               {label}

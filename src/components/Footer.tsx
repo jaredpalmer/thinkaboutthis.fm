@@ -7,7 +7,7 @@ import { Formik, Form, FieldProps } from 'formik';
 import axios from 'axios';
 import { Fieldset } from './Fieldset';
 import { css } from 'glamor';
-import { Link } from 'gatsby';
+import TextareaAutosize from 'react-autosize-textarea';
 
 const inputStyles = {
   WebkitAppearance: 'none',
@@ -17,9 +17,9 @@ const inputStyles = {
   verticalAlign: 'baseline',
   position: 'relative',
   margin: '0 0 2rem',
-  border: 0,
-  padding: '.5rem 0',
+  padding: '.25rem 0',
   background: 'transparent',
+  border: 0,
   borderBottom: `1px solid ${theme.color.gray}`,
   borderRadius: 0,
   fontSize: 18,
@@ -29,7 +29,7 @@ const inputStyles = {
   width: '100%',
   transition: 'all 200ms ease',
   '&:focus': {
-    borderBottom: `1px solid ${theme.color.gray}`,
+    borderBottom: `1px solid ${theme.color.grayLighter}`,
   },
   '&:placeholder': {
     fontSize: 18,
@@ -52,7 +52,7 @@ export const Footer: React.SFC<FooterProps> = ({ showForm = true }) => {
         <div {...css({ maxWidth: 675, margin: '0 auto' })}>
           {showForm ? (
             <Formik
-              initialValues={{ name: '', email: '' }}
+              initialValues={{ name: '', email: '', whyListen: '' }}
               onSubmit={(values, { setSubmitting, setStatus }) => {
                 axios
                   .request({
@@ -108,6 +108,7 @@ export const Footer: React.SFC<FooterProps> = ({ showForm = true }) => {
                       >
                         Subscribe for updates
                       </h2>
+
                       <Fieldset
                         id="name"
                         name="name"
@@ -133,6 +134,19 @@ export const Footer: React.SFC<FooterProps> = ({ showForm = true }) => {
                             placeholder="Email"
                             required={true}
                             {...css(inputStyles)}
+                          />
+                        )}
+                      />
+                      <Fieldset
+                        id="whyListen"
+                        name="whyListen"
+                        label="Tell us why you want to listen to us (optional)..."
+                        render={({ field }: FieldProps) => (
+                          <TextareaAutosize
+                            {...field}
+                            placeholder="Tell us why you want to listen to us...(optional)"
+                            required={false}
+                            {...css({ ...inputStyles, marginBottom: '1rem' })}
                           />
                         )}
                       />
