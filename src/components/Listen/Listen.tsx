@@ -5,6 +5,7 @@ import googlePlay from './google-play.png';
 import overcast from './overcast.png';
 import pocket from './pocket-casts.png';
 import anchor from './anchor.jpg';
+import stitcher from './stitcher.jpg';
 import castro from './castro.svg';
 import spotify from './spotify.png';
 import rss from './rss.png';
@@ -24,17 +25,18 @@ export const PODCAST_LINKS: ActionLinkProps[] = [
     href: 'https://open.spotify.com/show/1TGVwPoGMrZ9DwnhPccuEY',
     text: 'Spotify',
   },
-  // {
-  //   src: google,
-  //   href:
-  //     'https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS84bGNBMElzNw%3D%3D',
-  //   text: 'Google Podcast',
-  // },
+  {
+    src: google,
+    href:
+      'https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vdGhpbmstYWJvdXQtdGhpcy13aXRoLXNoZWxseS1wYWxtZXItcm9zcy1tYXJ0aW4%3D',
+    text: 'Google Podcast',
+  },
   {
     src: pocket,
     href: 'https://pca.st/itunes/1481099167',
     text: 'PocketCasts',
   },
+
   // {
   //   src: googlePlay,
   //   href:
@@ -50,6 +52,11 @@ export const PODCAST_LINKS: ActionLinkProps[] = [
     src: overcast,
     href: 'https://overcast.fm/itunes1481099167',
     text: 'Overcast',
+  },
+  {
+    src: stitcher,
+    href: 'https://www.stitcher.com/s?fid=467115&refid=stpr',
+    text: 'Stitcher',
   },
   {
     src: castro,
