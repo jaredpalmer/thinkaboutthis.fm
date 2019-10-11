@@ -25,6 +25,6 @@ export const LINKS = [
   },
   {
     text: 'Sponsor the Podcast',
-    href: 'mailto:hello@thinkaboutthis.fm',
+    href: 'http://www.westwoodonepodcasts.com/advertising/',
   },
 ];
