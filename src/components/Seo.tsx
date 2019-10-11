@@ -35,7 +35,7 @@ export const Seo: React.SFC<SeoProps> = ({
               content: title,
             },
             title && { property: 'og:title', content: title },
-            { name: 'twitter:site', content: '@thinkabouthisfm' },
+            { name: 'twitter:site', content: '@thinkaboutthis' },
             description && {
               name: 'description',
               content: description,

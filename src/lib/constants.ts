@@ -8,8 +8,8 @@ export const LINKS = [
   //   href: 'https://shop.thinkaboutthis.fm',
   // },
   {
-    text: '@thinkabouthisfm',
-    href: 'https://twitter.com/thinkabouthisfm',
+    text: '@thinkaboutthis',
+    href: 'https://twitter.com/thinkaboutthis',
   },
   {
     text: '@shellypalmer',

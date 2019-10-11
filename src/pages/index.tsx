@@ -133,7 +133,7 @@ export default class Home extends React.Component<any, any> {
                 })}
               />
               <ShareRow
-                author="thinkabouthisfm"
+                author="thinkaboutthis"
                 {...css({ marginBottom: rhythm(2) })}
               />
               <div {...css({ marginTop: rhythm(2) })}>

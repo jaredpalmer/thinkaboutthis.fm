@@ -189,7 +189,7 @@ export default class Episode extends React.Component<any, any> {
                           · {format(episode.date, 'MMM D, YYYY')}
                         </p>
                         <ShareRow
-                          author="thinkabouthisfm"
+                          author="thinkaboutthis"
                           {...css({ marginBottom: rhythm(2) })}
                         />
                       </header>
