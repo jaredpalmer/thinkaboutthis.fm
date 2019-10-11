@@ -19,7 +19,7 @@ export default class Home extends React.Component<any, any> {
       <div>
         <Seo
           title="Think About This Podcast"
-          description="The podcast that challenges you to think differently about business, money, culture, technology, media, marketing and more. Hosted by Shelly Palmer and Ross Martin."
+          description="A Podcast that Challenges You to Think Differently About Business, Money, Culture, Technology, Media and Marketing. Hosted by Shelly Palmer and Ross Martin."
           slug="/"
         />
         {/* <div

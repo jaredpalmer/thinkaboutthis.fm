@@ -23,8 +23,8 @@ export function Header(props: any) {
           opacity: 0.9,
         })}
       >
-        The podcast that challenges you to think differently about business,
-        money, culture, technology, media, marketing and more. Hosted by{' '}
+        A podcast that challenges you to think differently about business,
+        money, culture, technology, media, marketing, and more. Hosted by{' '}
         <a
           {...css({ textDecoration: 'none', fontWeight: 700 })}
           href="http://twitter.com/shellypalmer"
@@ -38,7 +38,7 @@ export function Header(props: any) {
         >
           Ross Martin
         </a>
-        .
+        . The more you listen, the less you know!
       </p>
     </div>
   );
