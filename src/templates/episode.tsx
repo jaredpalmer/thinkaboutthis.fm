@@ -67,12 +67,31 @@ export default class Episode extends React.Component<any, any> {
         >
           <Nav showStripe={false} />
         </div>
-        <div>
+        <GatsbyImage
+          className={css({
+            display: 'block',
+            [theme.media.medium]: { display: 'none' },
+          })}
+          sizes={this.props.data.heroMobile.childImageSharp.sizes}
+        />
+        <GatsbyImage
+          className={css({
+            display: 'none',
+            [theme.media.medium]: { display: 'block' },
+          })}
+          sizes={this.props.data.hero.childImageSharp.sizes}
+        />
+        <div
+          {...css({
+            maxWidth: 675,
+            [theme.media.medium]: { maxWidth: 1100 },
+            margin: '0 auto',
+            padding: '0 1rem',
+          })}
+        >
           <div
             {...css({
-              [theme.media.medium]: { maxWidth: 968 },
-              margin: '0 auto',
-              padding: '0 1rem',
+              flex: 0,
             })}
           >
             <div
@@ -85,7 +104,11 @@ export default class Episode extends React.Component<any, any> {
               <div
                 {...css({
                   order: 2,
-                  [theme.media.medium]: { order: 1, display: 'block' },
+                  [theme.media.medium]: {
+                    order: 1,
+                    display: 'block',
+                    margin: '-10rem auto 0',
+                  },
                   margin: '0 auto',
                   flex: 0,
                 })}
@@ -99,7 +122,6 @@ export default class Episode extends React.Component<any, any> {
                     margin: '2rem auto',
                     width: 300,
                     height: 300,
-                    // margin: '.5rem 0',
                     borderRadius: 16,
                     overflow: 'hidden',
                     boxShadow: `0 4px 8px rgba(0,0,0,.1), 0 16px 32px rgba(0,0,0,.1)`,
@@ -107,7 +129,7 @@ export default class Episode extends React.Component<any, any> {
                 >
                   <GatsbyImage
                     style={{ borderRadius: 16 }}
-                    sizes={this.props.data.file.childImageSharp.sizes}
+                    sizes={this.props.data.album.childImageSharp.sizes}
                   />
                 </Link>
                 <div {...css({ marginBottom: rhythm(1) })}>
@@ -216,6 +238,7 @@ export default class Episode extends React.Component<any, any> {
               </div>
             </div>
           </div>
+
           <Footer />
         </div>
       </>
@@ -225,9 +248,23 @@ export default class Episode extends React.Component<any, any> {
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    file(relativePath: { eq: "album.png" }) {
+    album: file(relativePath: { eq: "album.png" }) {
       childImageSharp {
         sizes(maxWidth: 500, maxHeight: 500) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    hero: file(relativePath: { eq: "hero3.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1700, maxHeight: 550) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    heroMobile: file(relativePath: { eq: "heroMobile.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1000, maxHeight: 400) {
           ...GatsbyImageSharpSizes
         }
       }

@@ -22,45 +22,24 @@ export default class Home extends React.Component<any, any> {
           description="A Podcast that Challenges You to Think Differently About Business, Money, Culture, Technology, Media and Marketing. Hosted by Shelly Palmer and Ross Martin."
           slug="/"
         />
-        {/* <div
-          {...css({
-            top: 0,
-            left: 0,
-            right: 0,
-            zIndex: 9999,
-            backgroundImage: `linear-gradient(left, #0ef 0%, #F249CF 100%)`,
+        <GatsbyImage
+          className={css({
+            display: 'block',
+            [theme.media.medium]: { display: 'none' },
           })}
-        >
-          <a
-            href="https://shop.undefined.fm"
-            {...css({
-              display: 'block',
-              padding: `.25rem 2rem`,
-              textAlign: 'center',
-              color: '#fff',
-              fontSize: 15,
-              fontWeight: 'bold',
-            })}
-          >
-            <span {...css({ [theme.media.large]: { display: 'none ' } })}>
-              Our new store is live! Get your swag on{' '}
-            </span>
-            <span
-              {...css({
-                display: 'none',
-                [theme.media.large]: { display: 'inline' },
-              })}
-            >
-              Our new store is live! Get your swag on with offical Undefined
-              gear{' '}
-            </span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div> */}
+          sizes={this.props.data.heroMobile.childImageSharp.sizes}
+        />
+        <GatsbyImage
+          className={css({
+            display: 'none',
+            [theme.media.medium]: { display: 'block' },
+          })}
+          sizes={this.props.data.hero.childImageSharp.sizes}
+        />
         <div
           {...css({
             maxWidth: 675,
-            [theme.media.medium]: { maxWidth: 968 },
+            [theme.media.medium]: { maxWidth: 1100 },
             margin: '0 auto',
             padding: '0 1rem',
           })}
@@ -73,7 +52,8 @@ export default class Home extends React.Component<any, any> {
           >
             <div
               {...css({
-                margin: '0 auto',
+                margin: '-6rem auto 0',
+                [theme.media.medium]: { margin: '-10rem auto 0' },
                 flex: 0,
               })}
             >
@@ -85,8 +65,10 @@ export default class Home extends React.Component<any, any> {
                   textAlign: 'center',
                   background: '#000',
                   margin: '2rem auto',
-                  width: 300,
-                  height: 300,
+                  width: 200,
+                  height: 200,
+                  [theme.media.medium]: { width: 300, height: 300 },
+
                   borderRadius: 16,
                   overflow: 'hidden',
                   boxShadow: `0 4px 8px rgba(0,0,0,.1), 0 16px 32px rgba(0,0,0,.1)`,
@@ -94,7 +76,7 @@ export default class Home extends React.Component<any, any> {
               >
                 <GatsbyImage
                   style={{ borderRadius: 16 }}
-                  sizes={this.props.data.file.childImageSharp.sizes}
+                  sizes={this.props.data.album.childImageSharp.sizes}
                 />
               </Link>
               <Header {...css({ [theme.media.medium]: { display: 'none' } })} />
@@ -255,9 +237,23 @@ export default class Home extends React.Component<any, any> {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "album.png" }) {
+    album: file(relativePath: { eq: "album.png" }) {
       childImageSharp {
         sizes(maxWidth: 500, maxHeight: 500) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    hero: file(relativePath: { eq: "hero3.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1700, maxHeight: 550) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    heroMobile: file(relativePath: { eq: "heroMobile.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1000, maxHeight: 400) {
           ...GatsbyImageSharpSizes
         }
       }
