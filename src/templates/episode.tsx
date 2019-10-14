@@ -65,15 +65,8 @@ export default class Episode extends React.Component<any, any> {
             [theme.media.medium]: { display: 'none' },
           })}
         >
-          <Nav showStripe={false} />
+          <Nav showStripe={true} />
         </div>
-        <GatsbyImage
-          className={css({
-            display: 'block',
-            [theme.media.medium]: { display: 'none' },
-          })}
-          sizes={this.props.data.heroMobile.childImageSharp.sizes}
-        />
         <GatsbyImage
           className={css({
             display: 'none',
@@ -258,13 +251,6 @@ export const pageQuery = graphql`
     hero: file(relativePath: { eq: "hero3.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 1700, maxHeight: 550) {
-          ...GatsbyImageSharpSizes
-        }
-      }
-    }
-    heroMobile: file(relativePath: { eq: "heroMobile.jpg" }) {
-      childImageSharp {
-        sizes(maxWidth: 1000, maxHeight: 400) {
           ...GatsbyImageSharpSizes
         }
       }

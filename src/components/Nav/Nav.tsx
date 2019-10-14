@@ -10,7 +10,7 @@ const stripeStyles = {
   right: 0,
   zIndex: 9999,
   height: 4,
-  backgroundImage: `linear-gradient(left, #00FFF4 0%, #DB00FF 100%)`,
+  background: '#00FFF4',
 };
 
 export function Nav({ showStripe = true }: { showStripe?: boolean }) {
@@ -40,13 +40,15 @@ export function Nav({ showStripe = true }: { showStripe?: boolean }) {
             textDecoration: 'none',
             color: theme.color.white,
             transition: 'color 100ms ease-out',
+            textTransform: 'lowercase',
             ':hover': {
               textDecoration: 'none',
               color: theme.color.purple,
             },
           })}
         >
-          Think About This...
+          Think <span style={{ color: '#99FFF2' }}>About</span>{' '}
+          <span style={{ color: '#00FFDE' }}>This</span>
           {/* <span
             {...css({
               display: 'inline-block',
