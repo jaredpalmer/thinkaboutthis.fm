@@ -65,8 +65,9 @@ export default class Home extends React.Component<any, any> {
                   textAlign: 'center',
                   background: '#000',
                   margin: '2rem auto',
-                  width: 200,
-                  height: 200,
+                  width: 150,
+                  height: 150,
+                  [theme.media.small]: { width: 175, height: 175 },
                   [theme.media.medium]: { width: 300, height: 300 },
 
                   borderRadius: 16,
