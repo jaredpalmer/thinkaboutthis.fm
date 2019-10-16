@@ -123,106 +123,110 @@ export default class Home extends React.Component<any, any> {
                 {this.props.data.allEpisode.edges.map(
                   ({ node }: any, i: number) => (
                     <div key={`${node.date}${i}-rss`}>
-                      <div {...css({ display: 'flex', alignItems: 'center' })}>
-                        <Link
-                          to={node.fields.slug}
-                          style={{
-                            textDecoration: 'none',
-                          }}
-                          {...css({
-                            '& svg': {
-                              color: 'white',
-                            },
-                            '&:hover svg': {
-                              color: theme.color.purple,
-                            },
-                            transition: 'scale 100ms ease-out',
-                            '&:active': {
-                              transform: 'scale(.98)',
-                            },
-                          })}
-                        >
-                          <svg
-                            height="48"
-                            width="48"
-                            version="1.1"
-                            viewBox="0 0 48 48"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlSpace="preserve"
-                            aria-hidden="true"
-                            {...css({
-                              verticalAlign: 'middle',
-                              height: 42,
-                              width: 42,
-                              marginRight: rhythm(0.5),
-                            })}
+                      {node.episodeNumber == null ? null : (
+                        <>
+                          <div
+                            {...css({ display: 'flex', alignItems: 'center' })}
                           >
-                            <title>button circle play</title>
-                            <g fill="currentColor">
-                              <path
-                                // tslint:disable-next-line:max-line-length
-                                d="M24,1C11.317,1,1,11.317,1,24s10.317,23,23,23s23-10.317,23-23S36.683,1,24,1z M32.524,24.852l-13,8 C19.363,32.95,19.182,33,19,33c-0.168,0-0.336-0.042-0.488-0.127C18.196,32.696,18,32.362,18,32V16c0-0.362,0.196-0.696,0.512-0.873 c0.317-0.178,0.703-0.169,1.013,0.021l13,8C32.82,23.33,33,23.652,33,24S32.82,24.67,32.524,24.852z"
-                                fill="currentColor"
-                              />
-                            </g>
-                          </svg>
-                          <VisuallyHidden>View {node.title}</VisuallyHidden>
-                        </Link>
-                        <div {...css({ flex: 1 })}>
-                          <span
-                            {...css({
-                              display: 'block',
-                              color: theme.color.grayLighter,
-                              fontSize: rhythm(0.5),
-                              textTransform: 'uppercase',
-                              letterSpacing: '.1em',
-                            })}
-                          >
-                            {format(node.date, 'MMMM D, YYYY')} ·{' '}
-                            {node.episodeNumber === -1 // default episode number
-                              ? node.episodeType
-                              : `Episode ${node.episodeNumber}`}
-                          </span>
-                          <Link
-                            to={node.fields.slug}
-                            aria-label={`View ${node.title}`}
-                            style={{ textDecoration: 'none' }}
-                          >
-                            <h2
+                            <Link
+                              to={node.fields.slug}
+                              style={{
+                                textDecoration: 'none',
+                              }}
                               {...css({
-                                color: '#fff',
-                                marginTop: 0,
-                                fontSize: rhythm(0.85),
-                                ':hover': {
-                                  color: '#00FFF4',
-                                  cursor: 'pointer',
+                                '& svg': {
+                                  color: 'white',
+                                },
+                                '&:hover svg': {
+                                  color: theme.color.purple,
+                                },
+                                transition: 'scale 100ms ease-out',
+                                '&:active': {
+                                  transform: 'scale(.98)',
                                 },
                               })}
                             >
-                              {node.title}
-                            </h2>
-                          </Link>
-                        </div>
-                      </div>
+                              <svg
+                                height="48"
+                                width="48"
+                                version="1.1"
+                                viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlSpace="preserve"
+                                aria-hidden="true"
+                                {...css({
+                                  verticalAlign: 'middle',
+                                  height: 42,
+                                  width: 42,
+                                  marginRight: rhythm(0.5),
+                                })}
+                              >
+                                <title>button circle play</title>
+                                <g fill="currentColor">
+                                  <path
+                                    // tslint:disable-next-line:max-line-length
+                                    d="M24,1C11.317,1,1,11.317,1,24s10.317,23,23,23s23-10.317,23-23S36.683,1,24,1z M32.524,24.852l-13,8 C19.363,32.95,19.182,33,19,33c-0.168,0-0.336-0.042-0.488-0.127C18.196,32.696,18,32.362,18,32V16c0-0.362,0.196-0.696,0.512-0.873 c0.317-0.178,0.703-0.169,1.013,0.021l13,8C32.82,23.33,33,23.652,33,24S32.82,24.67,32.524,24.852z"
+                                    fill="currentColor"
+                                  />
+                                </g>
+                              </svg>
+                              <VisuallyHidden>View {node.title}</VisuallyHidden>
+                            </Link>
+                            <div {...css({ flex: 1 })}>
+                              <span
+                                {...css({
+                                  display: 'block',
+                                  color: theme.color.grayLighter,
+                                  fontSize: rhythm(0.5),
+                                  textTransform: 'uppercase',
+                                  letterSpacing: '.1em',
+                                })}
+                              >
+                                {format(node.date, 'MMMM D, YYYY')} ·{' '}
+                                {`Episode ${node.episodeNumber}`}
+                              </span>
+                              <Link
+                                to={node.fields.slug}
+                                aria-label={`View ${node.title}`}
+                                style={{ textDecoration: 'none' }}
+                              >
+                                <h2
+                                  {...css({
+                                    color: '#fff',
+                                    marginTop: 0,
+                                    fontSize: rhythm(0.85),
+                                    ':hover': {
+                                      color: '#00FFF4',
+                                      cursor: 'pointer',
+                                    },
+                                  })}
+                                >
+                                  {node.title}
+                                </h2>
+                              </Link>
+                            </div>
+                          </div>
 
-                      <p
-                        {...css({
-                          fontSize: rhythm(0.6),
-                          color: theme.color.grayLightest,
-                        })}
-                      >
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: node.description,
-                          }}
-                        />{' '}
-                        <Link
-                          to={node.fields.slug}
-                          aria-label={`View ${node.title}`}
-                        >
-                          Listen to Episode →
-                        </Link>
-                      </p>
+                          <p
+                            {...css({
+                              fontSize: rhythm(0.6),
+                              color: theme.color.grayLightest,
+                            })}
+                          >
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: node.description,
+                              }}
+                            />{' '}
+                            <Link
+                              to={node.fields.slug}
+                              aria-label={`View ${node.title}`}
+                            >
+                              Listen to Episode →
+                            </Link>
+                          </p>
+                        </>
+                      )}
                     </div>
                   )
                 )}
@@ -265,7 +269,6 @@ export const query = graphql`
           id
           title
           description
-          episodeType
           episodeNumber
           duration
           date
