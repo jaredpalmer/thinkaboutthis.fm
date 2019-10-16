@@ -8,6 +8,7 @@ import anchor from './anchor.jpg';
 import stitcher from './stitcher.jpg';
 import castro from './castro.svg';
 import spotify from './spotify.png';
+import iheart from './iheart.jpg';
 import rss from './rss.png';
 import { css } from 'glamor';
 import { theme } from '../../lib/theme';
@@ -62,6 +63,11 @@ export const PODCAST_LINKS: ActionLinkProps[] = [
     src: castro,
     href: 'https://castro.fm/itunes/1481099167',
     text: 'Castro',
+  },
+  {
+    src: iheart,
+    href: `https://www.iheart.com/podcast/1069-think-about-this-with-she-50215366/`,
+    text: 'iHeartRadio'
   },
   {
     src: rss,
