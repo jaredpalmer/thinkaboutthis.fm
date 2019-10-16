@@ -1,0 +1,14 @@
+name: Rebuild Site
+
+on: 
+ schedule:
+  - cron: "30 10 * * 3"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:   
+    - name: Ping Netlify for Build
+      run: curl -X POST -d {} ${{ secrets.NETLIFY_URL }}    
