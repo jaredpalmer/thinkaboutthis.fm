@@ -143,7 +143,7 @@ export default class Episode extends React.Component<any, any> {
                   <Bio
                     name="Shelly Palmer"
                     twitterHandle="shellypalmer"
-                    avatarUrl="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/56355255_10157326835544595_9205623440986341376_n.jpg?_nc_cat=101&_nc_oc=AQnjVjLzZP1C8e4I_Tp9p1Ql4JW8I7FORRzVh5twk3hsPiE0Oq13Q7K5_SQvRvf8zqA&_nc_ht=scontent-lga3-1.xx&oh=7e4ee00ae1e83bcacb643e110c4b7258&oe=5E2D1619"
+                    avatarUrl="https://pbs.twimg.com/profile_images/431422376308256768/OgtL326a_400x400.jpeg"
                   />
                   <Bio
                     name="Ross Martin"
